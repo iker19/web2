@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="e02.css">
+</head>
+
+<body>
+    <div id="general">
+        <div id="titul">
+            <h1>E11 - Intereses</h1>
+        </div>
+        <div class="contingut">
+            <div class="enunciat">
+                <h2>Enunciado</h2>
+            </div>
+            <div class="text">
+                <p>Programa que muestra el crecimiento de una inversión a
+                <a href="https://es.wikipedia.org/wiki/Inter%C3%A9s_compuesto">interés compuesto</a><br>
+                El usuario entra el capital inicial, la tasa de interés anual y el plazo
+                en años. <br>
+
+                El programa muestra una tabla con tres columnas y una fila por cada año. <br>
+
+                En la primera columna aparece el número del año, en la segunda los
+                intereses generados en ese año y en la tercera el capital acumulado.
+            </p>
+            </div>
+        </div>
+        <div class="contingut">
+            <div class="enunciat">
+                <h2>Salida del programa</h2>
+            </div>
+
+            <div class="codigo">
+                <pre>
+Entra el capital inicial : 8000
+Entra la tasa de interés anual : 4.5
+Entra el número de años : 5
+
++-----+-------------+-------------------+
+| AÑO |  INTERESES  | CAPITAL ACUMULADO |
++-----+-------------+-------------------+
+|   1 |      360,00 |          8.360,00 |
+|   2 |      376,20 |          8.736,20 |
+|   3 |      393,13 |          9.129,33 |
+|   4 |      410,82 |          9.540,15 |
+|   5 |      429,31 |          9.969,46 |
++-----+-------------+-------------------+
+Capital final : 9969,46
+                </pre>
+            </div>
+        </div>
+        <div class="contingut">
+            <div class="enunciat">
+                <h2>Solución</h2>
+            </div>
+
+            <div >
+                <pre>
+import java.io.*;
+
+public class E11_Intereses {
+                    
+    public static void main(String[] args) throws IOException {
+        
+        BufferedReader entrada = new BufferedReader(
+        new InputStreamReader(System.in));
+        
+        <span class="comentari">//Leer los datos</span>
+        
+        System.out.print(<span class="string">"Entra el capital inicial : "</span>);
+        double capital = Double.parseDouble(entrada.readLine());
+        
+        System.out.print(<span class="string">"Entra la tasa de interés anual : "</span>);
+        double tasa = Double.parseDouble(entrada.readLine());
+        
+        System.out.print(<span class="string">"Entra el número de años : "</span>);
+        int anyos = Integer.parseInt(entrada.readLine());
+        
+        <span class="comentari">//Mostrar la cabecera de la tabla</span>
+        
+        System.out.println (<span class="string">"+-----+-------------+-------------------+"</span>);
+        System.out.println (<span class="string">"| AÑO |  INTERESES  | CAPITAL ACUMULADO |"</span>);
+        System.out.println (<span class="string">"+-----+-------------+-------------------+"</span>);
+        
+        <span class="comentari">//Mostrar las filas de la tabla mediante un bucle</span>
+        
+        double interes;
+        for(int i=1; i&lt;=anyos; i++){ 
+            interes=capital * tasa / 100; 
+            capital +=interes; 
+            System.out.printf (<span class="string">"| %3d | %,11.2f | %,17.2f |\n",i,interes,capital</span>); 
+        } 
+                        
+        <span class="comentari">//Mostrar el pie de la tabla </span>
+
+        System.out.println(<span class="string">"+-----+-------------+-------------------+"</span>); 
+
+        <span class="comentari">//Mostrar el capital final </span>
+
+        System.out.printf(<span class="string">"Capital final : %10.2f ", capital</span>);
+    }
+}
+                </pre>
+            </div>
+        </div>
+        <footer>
+            <p><a href="https://www.iesthosicodina.cat/">IES Thos i Codina</a></p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+/* General */
+@font-face{
+    font-family: "Crimson";
+    src: url("fonts/Crimson_Text/CrimsonText-Regular.ttf")
+}
+body{
+    background-image: url(img/pentagon.png);
+}
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+div#general{
+    background-color: aquamarine;
+    margin:0px 20% 0px 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left:solid  darkgreen 4px;
+    border-right:solid  darkgreen 4px;
+    max-width: fit-content;
+}
+h2{
+    color:white;
+    padding: 5px 0px 5px 10px;
+    font-size: 15px;
+    font-family: Crimson;
+}
+.string{
+    color: red;
+}
+.comentari{
+    color: lime;
+}
+a{
+    font-weight: bold;
+}
+/* Titul */
+div#titul{
+    background-color: rgb(142, 240, 207);
+    margin:0px 10px 10px 10px;
+    border:double  darkgreen 10px;
+    border-radius: 10px;
+    background-image: url(img/bg_green.png);
+    padding: 10px 0px 10px 0px;
+    font-family:serif;
+}
+div#titul h1{
+    color: darkgreen;
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
+    font-family: Crimson;
+}
+/* Contingut */
+div#general div.contingut{
+    background-color: white;
+    border:solid  darkgreen 3px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 3px;
+}
+div.enunciat{
+    background-color: green;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom: 3px black solid;
+}
+div.codigo pre{
+    background-color: black;
+    color: white;
+    width: auto;
+}
+pre{
+    margin: 10px;
+    padding: 10px;
+    overflow-x: auto;
+}
+.text{
+    padding: 10px;
+}
+footer{
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+footer a{
+    color: green
+}
