@@ -6,7 +6,10 @@
 body{
     background-image: url(img/pentagon.png);
 }
-
+*{
+    margin: 0;
+    padding: 0;
+}
 
 div#general{
     background-color: aquamarine;
